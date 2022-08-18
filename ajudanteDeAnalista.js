@@ -10,9 +10,6 @@ let qtdHistorias = 0
 let listaUsuarios = []
 let listaRequisitos = []
 let listaObjetivos = []
-let usuario = ""
-let response = ""
-
 
 async function criaHistorias() {
     
@@ -20,13 +17,10 @@ async function criaHistorias() {
         
     if (qtdHistorias >= 1) {
         for (let i = 1; i <= qtdHistorias; i++){
-        
-            let usuario = await prompt(chalk.greenBright('Quem é o usuário, ou seja, o proprietário dessa história, a pessoa que irá utilizar a funcionalidade?  '))
-                listaUsuarios.push( await usuario)
-            let requisito = await prompt(chalk.greenBright('E qual é o requisito dessa história, ou seja, o que o usuário precisa fazer?  '))
-                listaRequisitos.push( await requisito)
-            let objetivo = await prompt(chalk.greenBright('E qual é o objetivo a ser alcançado por essa história, ou seja, o que se espera que aconteça após a ação ser executada?  '))
-                listaObjetivos.push(await objetivo)
+                    
+            listaUsuarios.push( await prompt(chalk.greenBright('Quem é o usuário, ou seja, o proprietário dessa história, a pessoa que irá utilizar a funcionalidade?  ')))
+            listaRequisitos.push( await prompt(chalk.greenBright('E qual é o requisito dessa história, ou seja, o que o usuário precisa fazer?  ')))
+            listaObjetivos.push( await prompt(chalk.greenBright('E qual é o objetivo a ser alcançado por essa história, ou seja, o que se espera que aconteça após a ação ser executada?  ')))
         
         }
         
@@ -41,12 +35,6 @@ async function criaHistorias() {
 
 criaHistorias()
 
-
-// (async function criaHistorias() {
-//     for (let i = 1; i <= qtdHistorias; i++) {
-//         usuario = await prompt(chalk.greenBright('Quem é o usuário, ou seja, o proprietário dessa história, a pessoa que irá utilizar a funcionalidade?  '))
-//     }
-// },
-// response = await usuario,
-// console.log(usuario)
-// )
+//colocar nomes das histórias
+//ajustar números das histórias nas perguntas
+//enumerar as perguntas
