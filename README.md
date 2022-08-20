@@ -11,5 +11,5 @@
 - Se for a primeira vez que baixar o projeto, executar:
   - `npm install`
 - Para executar o projeto, execute:
-  - `node index.js`
+  - `node ajudanteDeAnalista.js`
 - Respondas as perguntas de forma objetiva e aguarde o resultado.
